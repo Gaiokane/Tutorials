@@ -1,0 +1,14 @@
+<service>
+	<id>Nginx 1.18</id>
+	<name>Nginx Service 1.18</name>
+	<description>High Performance Nginx Service</description>
+	<logpath>C:\inetpub\nginx-1.18.0\logs</logpath>
+	<log mode="roll-by-size">
+		<sizeThreshold>10240</sizeThreshold>
+		<keepFiles>8</keepFiles>
+	</log>
+	<executable>C:\inetpub\nginx-1.18.0\nginx.exe</executable>
+	<startarguments>-p C:\inetpub\nginx-1.18.0</startarguments>
+	<stopexecutable>C:\inetpub\nginx-1.18.0\nginx.exe</stopexecutable>
+	<stoparguments>-p C:\inetpub\nginx-1.18.0 -s stop</stoparguments>
+</service>

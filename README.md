@@ -7,7 +7,9 @@
   * [1.1 准备工作](#1-1)
   * [1.2 开始配置IIS反向代理](#1-2)
 
-* [2. Nginx配置多站点访问](#2)
+* [2. 将Nginx安装为Windows服务](#2)
+  * [2.1 准备工作](#2-1)
+  * [2.2 配置并安装Nginx服务](#2-2)
 
 <h1 id="1">1. IIS配置反向代理</h1>
 
@@ -69,8 +71,63 @@
 
 [返回目录](#home)
 
-<h1 id="2">2. Nginx配置多站点访问</h1>
+<h1 id="2">2. 将Nginx安装为Windows服务</h1>
 
 <h2 id="2-1">2.1 准备工作</h2>
+
+> 下载<a href="files\2\nginx-service.exe" target="_blank" title="点击下载">nginx-service.exe</a>、<a href="files\2\nginx-service.exe.config" target="_blank" title="点击下载">nginx-service.exe.config</a>、<a href="files\2\nginx-service.xml" target="_blank" title="点击下载">nginx-service.xml</a>
+> 
+> nginx-service.exe是通过下载[Windows Service Wrapper](http://repo.jenkins-ci.org/releases/com/sun/winsw/winsw/ "查看各版本")工具后重命名后得到，可选择合适的版本下载
+
+<h2 id="2-2">2.2 配置并安装Nginx服务</h2>
+
+> 将下载的nginx-service.exe、nginx-service.exe.config、nginx-service.xml放在Nginx根目录(C:\inetpub\nginx-1.18.0)
+> 
+> nginx-service.exe.config中内容：
+> 
+> ````
+> <configuration>
+> 	<startup>
+> 		<supportedRuntime version="v2.0.50727" />
+> 		<supportedRuntime version="v4.0" />
+> 	</startup>
+> 	<runtime>
+> 		<generatePublisherEvidence enabled="false"/> 
+> 	</runtime>
+> </configuration>
+> ````
+> 
+> nginx-service.xml中内容：(该文件中涉及Nginx相关路径自行更改)
+> 
+> ````
+> <service>
+> 	<id>Nginx 1.18</id>
+> 	<name>Nginx Service 1.18</name>
+> 	<description>High Performance Nginx Service</description>
+> 	<logpath>C:\inetpub\nginx-1.18.0\logs</logpath>
+> 	<log mode="roll-by-size">
+> 		<sizeThreshold>10240</sizeThreshold>
+> 		<keepFiles>8</keepFiles>
+> 	</log>
+> 	<executable>C:\inetpub\nginx-1.18.0\nginx.exe</executable>
+> 	<startarguments>-p C:\inetpub\nginx-1.18.0</startarguments>
+> 	<stopexecutable>C:\inetpub\nginx-1.18.0\nginx.exe</stopexecutable>
+> 	<stoparguments>-p C:\inetpub\nginx-1.18.0 -s stop</stoparguments>
+> </service>
+> ````
+> 
+> 安装Nginx服务：
+> 
+> 在Nginx根目录中打开命令提示符(在Nginx根目录下按住Shift+鼠标右键，选择“在此处打开命令提示符”)
+> 
+>     nginx-service.exe install
+> 
+> 删除Nginx服务：
+> 
+>     sc delete "Nginx 1.18"
+> 
+> 注1：当服务名中间有空格时，需要用""
+> 
+> 注2：当服务正在运行时执行删除操作，cmd提示“[SC] DeleteService 成功”，服务列表中还在，服务停止后才会不显示在列表中
 
 [返回目录](#home)
