@@ -4,14 +4,14 @@
 <span id="home">目录</span>
 
 * [1. IIS配置反向代理](#1)
-  * [1.1 准备工作](#1.1)
-  * [1.2 开始配置IIS反向代理](#1.2)
+  * [1.1 准备工作](#1-1)
+  * [1.2 开始配置IIS反向代理](#1-2)
 
 * [2. Nginx配置多站点访问](#2)
 
 <h1 id="1">1. IIS配置反向代理</h1>
 
-<h2 id="1.1">1.1 准备工作</h2>
+<h2 id="1-1">1.1 准备工作</h2>
 
 > <!-- 安装[requestRouter_amd64.msi](files\1\requestRouter_amd64.msi "点击下载")、[rewrite_amd64_zh-CN.msi](files\1\rewrite_amd64_zh-CN.msi "点击下载") -->
 > 
@@ -19,7 +19,7 @@
 > 
 > 安装步骤都是一路默认下一步
 
-<h2 id="1.2">1.2 开始配置IIS反向代理</h2>
+<h2 id="1-2">1.2 开始配置IIS反向代理</h2>
 
 > 此处以反向代理到百度为例
 > 
@@ -66,5 +66,11 @@
 > 13)点击右上角应用
 > 
 > 14)浏览器访问http://localhost/baidu/ip，相当于访问https://www.baidu.com/s?wd=ip
+
+[返回目录](#home)
+
+<h1 id="2">2. Nginx配置多站点访问</h1>
+
+<h2 id="2-1">2.1 准备工作</h2>
 
 [返回目录](#home)
