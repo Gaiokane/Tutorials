@@ -11,6 +11,10 @@
   * [2.1 准备工作](#2-1)
   * [2.2 配置并安装Nginx服务](#2-2)
 
+* [3. Nginx配置多站点访问](#3)
+  * [3.1 准备工作](#3-1)
+  * [3.2 配置多站点访问](#3-2)
+
 <h1 id="1">1. IIS配置反向代理</h1>
 
 <h2 id="1-1">1.1 准备工作</h2>
@@ -129,5 +133,106 @@
 > 注1：当服务名中间有空格时，需要用""
 > 
 > 注2：当服务正在运行时执行删除操作，cmd提示“[SC] DeleteService 成功”，服务列表中还在，服务停止后才会不显示在列表中
+
+[返回目录](#home)
+
+<h1 id="3">3. Nginx配置多站点访问</h1>
+
+<h2 id="3-1">3.1 准备工作</h2>
+
+> Nginx根目录：C:\inetpub\nginx-1.18.0
+> 
+> 在nginx-1.18.0\conf下新建文件夹vhosts
+
+<h2 id="3-2">3.2 配置多站点访问</h2>
+
+> 配置Nginx虚拟目录
+> 
+> 打开nginx-1.18.0\conf\nginx.conf
+> 
+> 将虚拟目录配置到http块末尾
+> 
+> ````
+> http {
+> 	······
+> 	include ./conf/vhosts/*.conf;
+> }
+> ````
+> 
+> 创建web1配置文件
+> 
+> nginx-1.18.0\conf\vhosts\web1.conf
+> 
+> ````
+> server {
+>     listen       80;        # 监听端口
+>     server_name  web1;      # 站点域名
+> 
+>     location / {
+>         root   html/web1;   # 站点根目录
+>         index  index.html;  # 默认文档
+>     }
+> }
+> ````
+> 
+> 创建web1测试页面
+> 
+> > nginx-1.18.0\html\web1\index.html
+> 
+> ````
+> <html>
+> 	<head>
+> 		<title>This is Web1</title>
+> 	</head>
+> 	<body>
+> 		<h1>Web1</h1>
+> 	</body>
+> </html>
+> ````
+> 
+> 创建web2配置文件
+> 
+> nginx-1.18.0\conf\vhosts\web2.conf
+> 
+> ````
+> server {
+>     listen       80;        # 监听端口
+>     server_name  web2;      # 站点域名
+> 
+>     location / {
+>         root   html/web2;   # 站点根目录
+>         index  index.html;  # 默认文档
+>     }
+> }
+> ````
+> 
+> 创建web2测试页面
+> 
+> nginx-1.18.0\html\web2\index.html
+> 
+> ````
+> <html>
+> 	<head>
+> 		<title>This is web2</title>
+> 	</head>
+> 	<body>
+> 		<h1>web2</h1>
+> 	</body>
+> </html>
+> ````
+> 
+> 重启Nginx服务
+> 
+> 访问http://localhost/，对应文件路径为nginx-1.18.0\html\index.html
+> 
+> 访问http://web1/，对应文件路径为nginx-1.18.0\html\web1\index.html
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;注：需配置hosts文件，C:\Windows\System32\drivers\etc\hosts，增加127.0.0.1	web1
+> 
+> 访问http://web2/，对应文件路径为nginx-1.18.0\html\web2\index.html
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;注：需配置hosts文件，C:\Windows\System32\drivers\etc\hosts，增加127.0.0.1	web2
+> 
+> 参考配置文件：<a href="files\3\nginx.conf" target="_blank" title="点击下载">nginx.conf</a>、<a href="files\3\web1.conf" target="_blank" title="点击下载">web1.conf</a>、<a href="files\3\index.html" target="_blank" title="点击下载">index.html</a>
 
 [返回目录](#home)
