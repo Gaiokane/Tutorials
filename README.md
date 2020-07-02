@@ -15,6 +15,8 @@
   * [3.1 准备工作](#3-1)
   * [3.2 配置多站点访问](#3-2)
 
+* [4. WordPress插件](#4)
+
 <h1 id="1">1. IIS配置反向代理</h1>
 
 <h2 id="1-1">1.1 准备工作</h2>
@@ -234,5 +236,25 @@
 > &nbsp;&nbsp;&nbsp;&nbsp;注：需配置hosts文件，C:\Windows\System32\drivers\etc\hosts，增加127.0.0.1	web2
 > 
 > 参考配置文件：<a href="files\3\nginx.conf" target="_blank" title="点击下载">nginx.conf</a>、<a href="files\3\web1.conf" target="_blank" title="点击下载">web1.conf</a>、<a href="files\3\index.html" target="_blank" title="点击下载">index.html</a>
+
+[返回目录](#home)
+
+<h1 id="4">4. WordPress插件</h1>
+
+> 1) Wordfence Security：安全性（登录两步验证、限制登录失败次数...）
+> 
+> 2) WP Statistics：站点分析统计工具
+> 
+> 3) Elementor：可视化页面编辑器
+> 
+> 4) UpdraftPlus Backup/Restore：站点备份恢复
+> 
+> 5) WP Super Cache：缓存
+> 
+> 6) Yoast SEO：SEO
+> 
+> 7) EWWW Image Optimizer：图像优化
+> 
+> 8) Modulobox：图片预览
 
 [返回目录](#home)
