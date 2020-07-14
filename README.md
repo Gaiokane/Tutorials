@@ -258,5 +258,7 @@
 > 8) Modulobox：图片预览
 > 
 > 9) Real Media Library：媒体库管理
+> 
+> 10) Smart Slider 3：图片轮播插件
 
 [返回目录](#home)
