@@ -19,6 +19,8 @@
 
 * [5. 内网IIS配置SSL自签证书](#5)
 
+* [6. jetbrains全家桶注册码](#6)
+
 <h1 id="1">1. IIS配置反向代理</h1>
 
 <h2 id="1-1">1.1 准备工作</h2>
@@ -268,5 +270,19 @@
 <h1 id="5">5. 内网IIS配置SSL自签证书</h1>
 
 > 
+
+[返回目录](#home)
+
+<h1 id="6">6. jetbrains全家桶注册码</h1>
+
+> [获得注册码](http://idea.medeming.com/ "获得注册码")
+> 
+> 微信公众号搜索"最美程序员"，进入公众号获取
+> 
+> [永久激活方案~](https://mp.weixin.qq.com/s/ayIzGQoIm_UCe-e0LdFhmw "永久激活方案~")
+> 
+> [下载地址1](http://idea.medeming.com/jets/ "下载地址1")
+> 
+> [下载地址2](http://idea.medeming.com/jihuoma/ "下载地址2")
 
 [返回目录](#home)
