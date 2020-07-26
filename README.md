@@ -21,6 +21,8 @@
 
 * [6. jetbrains全家桶注册码](#6)
 
+* [7. php、mysql 、nginx优化](#7)
+
 <h1 id="1">1. IIS配置反向代理</h1>
 
 <h2 id="1-1">1.1 准备工作</h2>
@@ -284,5 +286,55 @@
 > [下载地址1](http://idea.medeming.com/jets/ "下载地址1")
 > 
 > [下载地址2](http://idea.medeming.com/jihuoma/ "下载地址2")
+
+[返回目录](#home)
+
+<h1 id="7">7. php、mysql 、nginx优化</h1>
+
+参考来源：https://bbs.vpser.net/m/?a=viewthread&tid=8914
+
+> 修改/usr/local/php/etc/php-fpm.conf php 5.2调整：max_children的值
+> 
+> php 5.3以上版本调整：pm.min_spare_servers和pm.max_spare_servers的值适当增加
+> 
+> 最大值可以按内存xxMB/2/20 的整数来算，最小值可以按内存/2/40 的整数来算，可以少点或多大，可以自己调整运行看看。
+> 
+> ************************************
+> 
+> MySQL参数优化可以自己适当调整/etc/my.cnf 里的参数
+> 
+> key_buffer_size
+> 
+> table_open_cache
+> 
+> sort_buffer_size
+> 
+> read_buffer_size
+> 
+> myisam_sort_buffer_size
+> 
+> thread_cache_size
+> 
+> query_cache_size
+> 
+> tmp_table_size
+> 
+> innodb_buffer_pool_size
+> 
+> innodb_log_file_size
+> 
+> performance_schema_max_table_instances
+> 
+> 等，可以参考：https://github.com/licess/lnmp/blob/master/include/mysql.sh#L84 里面的内存设置
+> 
+> ***********************************
+> 
+> nginx可以调整 /usr/local/nginx/conf/nginx.conf 的worker_processes
+> 
+> Nginx作者说的：
+> 
+> 一般一个进程足够了，你可以把连接数设得很大。如果有SSL、gzip这些比较消耗CPU的工作，而且是多核CPU的话，可以设为和CPU的数量一样。或者要处理很多很多的小文件，而且文件总大小比内存大很多的时候，也可以把进程数增加，以充分利用IO带宽（主要似乎是IO操作有block）。
+> 
+> 现在大部分版本上也可以设置为：worker_processes auto; 自动调整
 
 [返回目录](#home)
