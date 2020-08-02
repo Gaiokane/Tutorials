@@ -423,7 +423,15 @@
 
 ## 4. 使用python清洗数据并导出
 
+### 4.1 环境准备
+
+此处以python3为例
+
+使用到的[pysqlcipher](https://github.com/leapcode/pysqlcipher "点击打开")
+
 待完成...
+
+———————————————————————————————————
 
 参考文章：
 
@@ -432,5 +440,21 @@ https://www.lianxh.cn/news/d34f09cb214e0.html
 https://blog.csdn.net/swinfans/article/details/88712593
 
 https://www.v2ex.com/t/466053
+
+———————————————————————————————————
+
+https://github.com/leapcode/pysqlcipher
+
+http://www.cocoachina.com/articles/98814
+
+https://blog.csdn.net/qq_36275540/article/details/80389941
+
+https://blog.csdn.net/taoszu/article/details/81432929
+
+https://github.com/Tencent/wcdb/wiki/Android%E6%8E%A5%E5%85%A5%E4%B8%8E%E8%BF%81%E7%A7%BB
+
+https://blog.csdn.net/abu2015/article/details/47910861
+
+https://www.openssl.org/source/
 
 [返回目录](#home)
