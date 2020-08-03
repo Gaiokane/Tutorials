@@ -423,11 +423,11 @@
 
 ## 4. 使用python清洗数据并导出
 
-### 4.1 环境准备
+### 4.1 准备工作
+
+使用DB Browser for SQLite打开数据库，点击任务栏中 工具>设置加密>OK，禁用数据库加密，以便之后使用python读取数据
 
 此处以python3为例
-
-使用到的[pysqlcipher](https://github.com/leapcode/pysqlcipher "点击打开")
 
 待完成...
 
