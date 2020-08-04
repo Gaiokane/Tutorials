@@ -429,7 +429,7 @@
 
 此处以python3为例
 
-待完成...
+该部分已转移至新项目，[继续阅读](https://github.com/Gaiokane/WeChat-DataBase-Export#4-1 "点击跳转")
 
 ———————————————————————————————————
 
@@ -440,21 +440,5 @@ https://www.lianxh.cn/news/d34f09cb214e0.html
 https://blog.csdn.net/swinfans/article/details/88712593
 
 https://www.v2ex.com/t/466053
-
-———————————————————————————————————
-
-https://github.com/leapcode/pysqlcipher
-
-http://www.cocoachina.com/articles/98814
-
-https://blog.csdn.net/qq_36275540/article/details/80389941
-
-https://blog.csdn.net/taoszu/article/details/81432929
-
-https://github.com/Tencent/wcdb/wiki/Android%E6%8E%A5%E5%85%A5%E4%B8%8E%E8%BF%81%E7%A7%BB
-
-https://blog.csdn.net/abu2015/article/details/47910861
-
-https://www.openssl.org/source/
 
 [返回目录](#home)
