@@ -27,6 +27,8 @@
 
 * [9. 导出微信收藏](#9)
 
+* [10. VM安装MacOS（Mojave 10.14）](#10)
+
 <h1 id="1">1. IIS配置反向代理</h1>
 
 <h2 id="1-1">1.1 准备工作</h2>
@@ -355,8 +357,8 @@
 
 ## 1. 使用到的 系统/软件 版本信息
 
-* macOS（Mojave 10.14）虚拟机安装教程[点击这里](/files/4/vm%20install%20macos.pdf "新窗口访问")
-* 微信（mac版2.4.2）
+* MacOS（Mojave 10.14）虚拟机安装教程[点击这里](/files/4/vm%20install%20macos.pdf "新窗口访问")
+* 微信（Mac版2.4.2）
 * DB Browser for SQLite（3.12）
 * lldb（1001.0.13.3）（使用时可以自动安装）
 * python（2.7.10）（版本无所谓）
@@ -440,5 +442,11 @@ https://www.lianxh.cn/news/d34f09cb214e0.html
 https://blog.csdn.net/swinfans/article/details/88712593
 
 https://www.v2ex.com/t/466053
+
+[返回目录](#home)
+
+<h1 id="10">10. VM安装MacOS（Mojave 10.14）</h1>
+
+MacOS（Mojave 10.14）虚拟机安装教程[点击这里](/files/4/vm%20install%20macos.pdf "新窗口访问")
 
 [返回目录](#home)
