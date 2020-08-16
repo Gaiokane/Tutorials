@@ -29,6 +29,8 @@
 
 * [10. VM安装MacOS（Mojave 10.14）](#10)
 
+* [11. 免费DDNS](#11)
+
 <h1 id="1">1. IIS配置反向代理</h1>
 
 <h2 id="1-1">1.1 准备工作</h2>
@@ -448,5 +450,11 @@ https://www.v2ex.com/t/466053
 <h1 id="10">10. VM安装MacOS（Mojave 10.14）</h1>
 
 MacOS（Mojave 10.14）虚拟机安装教程[点击这里](/files/4/vm%20install%20macos.pdf "新窗口访问")
+
+[返回目录](#home)
+
+<h1 id="11">11. 免费DDNS</h1>
+
+[Dynu](https://www.dynu.com/zh-CN/ "新窗口访问")
 
 [返回目录](#home)
